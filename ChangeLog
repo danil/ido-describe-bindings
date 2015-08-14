@@ -1,0 +1,5 @@
+2015-08-14  Danil Kutkevich  <danil@kutkevich.org>
+
+        * ido-describe-bindings.el (ido-describe-bindings): copy
+        ido-describe-bindings implementation from
+        <http://stackoverflow.com/questions/15938272/is-there-an-emacs-encyclopedia-of-keybindings#15939667>
