@@ -7,6 +7,6 @@ Inspired by Chris Barrett's `show-key-bindings` function
 
 ## Alternatives
 
-* [`helm-descbinds`][]
+* [helm-descbinds][]
 
-[`helm-descbinds`]: https://github.com/emacs-helm/helm-descbinds
+[helm-descbinds]: https://github.com/emacs-helm/helm-descbinds
