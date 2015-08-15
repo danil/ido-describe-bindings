@@ -4,7 +4,7 @@
 ;; Author: Danil <danil@kutkevich.org>
 ;; Package-Version: 0.0.1
 ;; Version: 0.0.1
-;; Package-Requires: ((ido "1.57"))
+;; Package-Requires: ()
 ;; Keywords: help
 ;; URL: http://danil.kutkevich.org/p/el/ido-describe-bindings
 
