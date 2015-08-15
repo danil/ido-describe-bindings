@@ -4,7 +4,7 @@
 ;; Author: Danil <danil@kutkevich.org>
 ;; Package-Version: 0.0.1
 ;; Version: 0.0.1
-;; Package-Requires: ()
+;; Package-Requires: ((dash "2.11.0"))
 ;; Keywords: help
 ;; URL: http://danil.kutkevich.org/p/el/ido-describe-bindings
 
@@ -34,6 +34,7 @@
 
 ;;; Code:
 (require 'ido)
+(require 'dash)
 
 (defgroup ido-describe-bindings nil
   "Yet Another `describe-bindings' with `ido'."
@@ -67,8 +68,8 @@ and return true if given argument is a bindig."
 
 (defun ido-describe-bindings--bindings-list ()
   "Get all key bindings as list."
-  (remove-if-not ido-describe-bindings--filter-function
-                 (ido-describe-bindings--dirty-bindings-list)))
+  (-filter ido-describe-bindings--filter-function
+           (ido-describe-bindings--dirty-bindings-list)))
 
 (defun ido-describe-bindings--format (str)
   "Format `STR' to `kbd' friendly string."

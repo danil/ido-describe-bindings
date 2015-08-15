@@ -8,6 +8,13 @@ Yet Another [describe-bindings][] with [ido][].
 Inspired by Chris Barrett's `show-key-bindings` function
 <http://stackoverflow.com/questions/15938272/is-there-an-emacs-encyclopedia-of-keybindings#15939667>
 
+## Dependencies
+
+* [ido][]
+* [dash][]
+
+[dash][]: https://github.com/magnars/dash.el
+
 ## Alternatives
 
 * [helm-descbinds][]
