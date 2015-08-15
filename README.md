@@ -13,7 +13,7 @@ Inspired by Chris Barrett's `show-key-bindings` function
 * [ido][]
 * [dash][]
 
-[dash][]: https://github.com/magnars/dash.el
+[dash]: https://github.com/magnars/dash.el
 
 ## Alternatives
 
