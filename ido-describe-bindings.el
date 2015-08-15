@@ -1,4 +1,4 @@
-;;; ido-describe-bindings.el --- Yet Another `describe-bindings' with `ido'.
+;;; ido-describe-bindings.el --- Yet another `describe-bindings' with `ido'.
 
 ;; Copyright (C) 2015 Danil <danil@kutkevich.org>.
 ;; Author: Danil <danil@kutkevich.org>
@@ -9,7 +9,7 @@
 ;; URL: http://danil.kutkevich.org/p/el/ido-describe-bindings
 
 ;;; Commentary:
-;; Yet Another `describe-bindings' with `ido'.
+;; Yet another `describe-bindings' with `ido'.
 ;; See the README.md for more details.
 
 ;;; License:
@@ -37,7 +37,7 @@
 (require 'dash)
 
 (defgroup ido-describe-bindings nil
-  "Yet Another `describe-bindings' with `ido'."
+  "Yet another `describe-bindings' with `ido'."
   :group 'help
   :group 'convenience)
 
@@ -77,7 +77,7 @@ and return true if given argument is a bindig."
 
 ;;;###autoload
 (defun ido-describe-bindings ()
-  "Yet Another `describe-bindings' with `ido'."
+  "Yet another `describe-bindings' with `ido'."
 
   (interactive)
   (let ((key (ido-describe-bindings--format
