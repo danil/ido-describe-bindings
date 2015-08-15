@@ -1,6 +1,9 @@
 # Ido describe bindings
 
-Yet Another `describe-bindings` with `ido`.
+Yet Another [describe-bindings][] with [ido][].
+
+[describe-bindings]: http://www.gnu.org/software/emacs/manual/html_node/elisp/Help-Functions.html#index-Helper_002ddescribe_002dbindings
+[ido]: http://emacswiki.org/emacs/InteractivelyDoThings
 
 Inspired by Chris Barrett's `show-key-bindings` function
 <http://stackoverflow.com/questions/15938272/is-there-an-emacs-encyclopedia-of-keybindings#15939667>
