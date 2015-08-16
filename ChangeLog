@@ -1,3 +1,11 @@
+2015-08-16  Danil Kutkevich  <danil@kutkevich.org>
+
+        * ido-describe-bindings.el (ido-describe-bindings): Depend on
+        `ido-vertical-mode`, and enable it explicitly while calling
+        `ido-completing-read`.
+
+        * README.md: Add installation section.
+
 2015-08-14  Danil Kutkevich  <danil@kutkevich.org>
 
         * ido-describe-bindings.el (ido-describe-bindings): copy

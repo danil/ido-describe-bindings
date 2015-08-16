@@ -2,9 +2,8 @@
 
 ;; Copyright (C) 2015 Danil <danil@kutkevich.org>.
 ;; Author: Danil <danil@kutkevich.org>
-;; Package-Version: 0.0.3
-;; Version: 0.0.3
-;; Package-Requires: ((dash "2.11.0"))
+;; Version: 0.0.4
+;; Package-Requires: ((ido-vertical-mode "1.0.0") (dash "2.11.0"))
 ;; Keywords: help
 ;; URL: https://github.com/danil/ido-describe-bindings
 
@@ -34,6 +33,7 @@
 
 ;;; Code:
 (require 'ido)
+(require 'ido-vertical-mode)
 (require 'dash)
 
 (defgroup ido-describe-bindings nil
@@ -80,6 +80,7 @@ and return true if given argument is a bindig."
   "Yet another `describe-bindings' with `ido'."
 
   (interactive)
+  (ido-vertical-mode t)
   (let ((key (ido-describe-bindings--format
               (ido-completing-read ido-describe-bindings--prompt
                                    (ido-describe-bindings--bindings-list)))))
