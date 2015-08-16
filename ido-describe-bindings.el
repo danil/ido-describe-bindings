@@ -2,11 +2,11 @@
 
 ;; Copyright (C) 2015 Danil <danil@kutkevich.org>.
 ;; Author: Danil <danil@kutkevich.org>
-;; Package-Version: 0.0.1
-;; Version: 0.0.1
+;; Package-Version: 0.0.3
+;; Version: 0.0.3
 ;; Package-Requires: ((dash "2.11.0"))
 ;; Keywords: help
-;; URL: http://danil.kutkevich.org/p/el/ido-describe-bindings
+;; URL: https://github.com/danil/ido-describe-bindings
 
 ;;; Commentary:
 ;; Yet another `describe-bindings' with `ido'.
