@@ -23,7 +23,9 @@ Inspired by Chris Barrett's `show-key-bindings` function
 
 ## Installation
 
-Via [melpa](http://melpa.org): `M-x package-install ido-describe-bindings`.
+Via [melpa][]: `M-x package-install ido-describe-bindings`.
+
+[melpa]: http://melpa.org/#/ido-describe-bindings
 
 If you are not set up `ido-vertical-mode`, you can configure it
 according to [readme][ido-vertical-mode-readme].
