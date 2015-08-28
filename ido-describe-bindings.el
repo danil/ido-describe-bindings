@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2015 Danil <danil@kutkevich.org>.
 ;; Author: Danil <danil@kutkevich.org>
-;; Version: 0.0.4
+;; Version: 0.0.5
 ;; Package-Requires: ((ido-vertical-mode "1.0.0") (dash "2.11.0"))
 ;; Keywords: help
 ;; URL: https://github.com/danil/ido-describe-bindings
@@ -52,11 +52,27 @@ and return true if given argument is a bindig."
   :type 'string
   :group 'ido-describe-bindings)
 
+(defcustom ido-describe-bindings--buffer-name "ido-describe-bindings"
+  "Name of the temporary buffer."
+  :type 'string
+  :group 'ido-describe-bindings)
+
 (defun ido-describe-bindings--dirty-bindings-string ()
   "Get all key bindings, header and new lines as string."
-  (with-temp-buffer
-    (describe-buffer-bindings (current-buffer))
-    (buffer-string)))
+  (let* ((buffer (current-buffer))
+
+         (temp-buffer (make-temp-name ido-describe-bindings--buffer-name))
+
+         (str (with-help-window temp-buffer
+                (with-current-buffer temp-buffer
+                  (describe-buffer-bindings buffer))
+                (pop-to-buffer temp-buffer)
+                (buffer-substring (point-min) (point-max)))))
+
+    (kill-buffer-and-window)
+    (pop-to-buffer buffer)
+
+    str))
 
 (defun ido-describe-bindings--dirty-bindings-list ()
   "Get all key bindings, header and new lines as list."

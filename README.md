@@ -32,13 +32,6 @@ according to [readme][ido-vertical-mode-readme].
 
 [ido-vertical-mode-readme]: https://github.com/creichert/ido-vertical-mode.el#turn-it-on
 
-## Bugs
-
-Many key-bindings missing from search results compared to
-`describe-bindings` ([#2][]).
-
-[#2]: https://github.com/danil/ido-describe-bindings/issues/2
-
 ## Alternatives
 
 * [helm-descbinds][]

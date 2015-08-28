@@ -1,3 +1,10 @@
+2015-08-28  Danil Kutkevich  <danil@kutkevich.org>
+
+        * ido-describe-bindings.el (ido-describe-bindings--dirty-bindings-string):
+        Respects all key bindings (fixes #2).
+
+        * README.md: Remove "knowing bugs" section.
+
 2015-08-16  Danil Kutkevich  <danil@kutkevich.org>
 
         * ido-describe-bindings.el (ido-describe-bindings): Depend on
