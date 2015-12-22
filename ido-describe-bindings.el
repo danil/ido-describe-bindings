@@ -79,8 +79,18 @@ and return true if given argument is a bindig."
   (split-string (ido-describe-bindings--dirty-bindings-string) "\n" t))
 
 (defun ido-describe-bindings--binding? (str)
-  (and (string-match-p (rx bol (any "C" "M" "H" "S")) str)
-       (not (string-match-p "Prefix Command" str))))
+  (and
+   (not (string-match-p (rx bol (any "<" "`" " ")) str))
+   (not (string-match-p "Prefix Command" str))
+   (not (or (string= "" str)
+            (string= "" str)
+            (string= "---             -------" str)
+            (string= "Function key map translations:" str)
+            (string= "Global Bindings:" str)
+            (string= "Input decoding map translations:" str)
+            (string= "Key translations:" str)
+            (string= "Major Mode Bindings:" str)
+            (string= "key             binding" str)))))
 
 (defun ido-describe-bindings--bindings-list ()
   "Get all key bindings as list."
