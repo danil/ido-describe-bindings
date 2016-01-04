@@ -32,6 +32,7 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
+
 (require 'ido)
 (require 'ido-vertical-mode)
 (require 'dash)
@@ -113,9 +114,5 @@ and return true if given argument is a bindig."
     (describe-key (kbd key))))
 
 (provide 'ido-describe-bindings)
-
-;; Local Variables:
-;; indent-tabs-mode: nil
-;; End:
 
 ;;; ido-describe-bindings.el ends here
