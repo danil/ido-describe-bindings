@@ -15,10 +15,8 @@ Inspired by Chris Barrett's `show-key-bindings` function
 ## Dependencies
 
 * [ido][]
-* [ido-vertical-mode][]
 * [dash][]
 
-[ido-vertical-mode]: https://github.com/creichert/ido-vertical-mode.el
 [dash]: https://github.com/magnars/dash.el
 
 ## Installation
