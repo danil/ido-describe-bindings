@@ -27,10 +27,12 @@ Via [melpa][]: `M-x package-install ido-describe-bindings`.
 
 [melpa]: http://melpa.org/#/ido-describe-bindings
 
-If you are not set up `ido-vertical-mode`, you can configure it
-according to [readme][ido-vertical-mode-readme].
+### Optionnaly
 
-[ido-vertical-mode-readme]: https://github.com/creichert/ido-vertical-mode.el#turn-it-on
+You can configure [ido-vertical-mode][] or [ido-grid-mode][]
+
+[ido-vertical-mode]: https://github.com/creichert/ido-vertical-mode.el
+[ido-grid-mode]: https://github.com/larkery/ido-grid-mode.el
 
 ## Alternatives
 

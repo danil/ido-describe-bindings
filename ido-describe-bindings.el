@@ -1,9 +1,9 @@
 ;;; ido-describe-bindings.el --- Yet another `describe-bindings' with `ido'.
 
-;; Copyright (C) 2015 Danil <danil@kutkevich.org>.
+;; Copyright (C) 2016 Danil <danil@kutkevich.org>.
 ;; Author: Danil <danil@kutkevich.org>
-;; Version: 0.0.5
-;; Package-Requires: ((ido-vertical-mode "1.0.0") (dash "2.11.0"))
+;; Version: 0.0.7
+;; Package-Requires: ((dash "2.11.0"))
 ;; Keywords: help
 ;; URL: https://github.com/danil/ido-describe-bindings
 
@@ -34,7 +34,6 @@
 ;;; Code:
 
 (require 'ido)
-(require 'ido-vertical-mode)
 (require 'dash)
 
 (defgroup ido-describe-bindings nil
@@ -56,6 +55,14 @@ and return true if given argument is a bindig."
 (defcustom ido-describe-bindings--buffer-name "ido-describe-bindings"
   "Name of the temporary buffer."
   :type 'string
+  :group 'ido-describe-bindings)
+
+(defcustom ido-describe-bindings--decorations
+  '("\n-> " "" "\n   " "\n   ..." "[" "]"
+    " [No match]" " [Matched]" " [Not readable]"
+    " [Too big]" " [Confirm]")
+  "Decorations for when ther is no vertical mode."
+  :type 'list
   :group 'ido-describe-bindings)
 
 (defun ido-describe-bindings--dirty-bindings-string ()
@@ -102,16 +109,35 @@ and return true if given argument is a bindig."
   "Format `STR' to `kbd' friendly string."
   (mapconcat 'identity (butlast (split-string str)) " "))
 
+(defun ido-describe-bindings--run ()
+  "Actually `ido-describe-bindings' function)
+This fuction makes the most of the work."
+
+  (interactive)
+
+  (let ((key (ido-describe-bindings--format
+              (ido-completing-read ido-describe-bindings--prompt
+                                   (ido-describe-bindings--bindings-list)))))
+    (describe-key (kbd key))))
+
 ;;;###autoload
 (defun ido-describe-bindings ()
   "Yet another `describe-bindings' with `ido'."
 
   (interactive)
-  (ido-vertical-mode t)
-  (let ((key (ido-describe-bindings--format
-              (ido-completing-read ido-describe-bindings--prompt
-                                   (ido-describe-bindings--bindings-list)))))
-    (describe-key (kbd key))))
+
+  (cond ((bound-and-true-p ido-vertical-mode)
+   (ido-describe-bindings--run))
+
+  ((bound-and-true-p ido-grid-mode)
+   (let ((ido-grid-mode-max-columns 1)
+         (ido-grid-mode-max-rows 8)
+         (ido-grid-mode-prefix-scrolls t))
+     (ido-describe-bindings--run)))
+
+  (t
+   (let ((ido-decorations ido-describe-bindings--decorations))
+     (ido-describe-bindings--run)))))
 
 (provide 'ido-describe-bindings)
 

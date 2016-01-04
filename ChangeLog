@@ -1,3 +1,12 @@
+2016-01-04  Danil Kutkevich  <danil@kutkevich.org>
+
+        * ido-describe-bindings.el (ido-describe-bindings):
+        `ido-describe-bindings` function now respects `ido`-related user
+        config (fixes #3).
+
+        * ido-describe-bindings.el (ido-describe-bindings--run): Move most
+        of the "code" to `ido-describe-bindings--run` function.
+
 2015-08-28  Danil Kutkevich  <danil@kutkevich.org>
 
         * ido-describe-bindings.el (ido-describe-bindings--dirty-bindings-string):
