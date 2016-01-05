@@ -48,7 +48,7 @@
 
 (defcustom ido-describe-bindings--filter-function 'ido-describe-bindings--binding?
   "Function which get string argument
-and return true if given argument is a bindig."
+and return true if given argument is a binding."
   :type 'string
   :group 'ido-describe-bindings)
 

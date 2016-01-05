@@ -25,7 +25,7 @@ Via [melpa][]: `M-x package-install ido-describe-bindings`.
 
 [melpa]: https://melpa.org/#/ido-describe-bindings
 
-### Optionnaly
+### Optionally
 
 You can configure [ido-vertical-mode][] or [ido-grid-mode][]
 
