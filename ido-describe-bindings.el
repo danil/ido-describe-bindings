@@ -1,8 +1,8 @@
 ;;; ido-describe-bindings.el --- Yet another `describe-bindings' with `ido'.
 
 ;; Copyright (C) 2016 Danil <danil@kutkevich.org>.
-;; Author: Danil <danil@kutkevich.org>
-;; Version: 0.0.7
+;; Author: Danil <danil@kutkevich.org>, Syohei YOSHIDA <syohex>
+;; Version: 0.0.8
 ;; Package-Requires: ((dash "2.11.0"))
 ;; Keywords: help
 ;; URL: https://github.com/danil/ido-describe-bindings
@@ -48,7 +48,7 @@
 
 (defcustom ido-describe-bindings--filter-function 'ido-describe-bindings--binding?
   "Function which get string argument
-and return true if given argument is a bindig."
+and return true if given argument is a binding."
   :type 'string
   :group 'ido-describe-bindings)
 
