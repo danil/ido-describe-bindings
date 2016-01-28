@@ -25,6 +25,15 @@ Via [melpa][]: `M-x package-install ido-describe-bindings`.
 
 [melpa]: https://melpa.org/#/ido-describe-bindings
 
+## Settings
+
+You may want to bind `ido-describe-bindings` to a convenient
+keystroke. In my setup, I bound it to `b` in `help-map`.
+By default it is `C-h b`.
+
+    (eval-after-load 'help
+                     (define-key help-map (kbd "b") 'ido-describe-bindings))
+
 ### Optionally
 
 You can configure [ido-vertical-mode][] or [ido-grid-mode][]
