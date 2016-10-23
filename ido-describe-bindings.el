@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2016 Danil <danil@kutkevich.org>.
 ;; Author: Danil <danil@kutkevich.org>, Syohei YOSHIDA <syohex@gmail.com>
-;; Version: 0.0.10
-;; Package-Requires: ((dash "2.12.1"))
+;; Version: 0.0.11
+;; Package-Requires: ((dash "2.13.0"))
 ;; Keywords: help
 ;; URL: https://github.com/danil/ido-describe-bindings
 
