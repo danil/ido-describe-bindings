@@ -2,6 +2,8 @@
 
 # Ido describe bindings
 
+`ido-describe-bindings` deprecated, use [counsel-descbinds](https://github.com/abo-abo/swiper/blob/8fae568daafdc79d4990ad739bac42ee230d3234/counsel.el#L1152)
+
 Yet another [describe-bindings][] with [ido][].
 
 [describe-bindings]: https://www.gnu.org/software/emacs/manual/html_node/elisp/Help-Functions.html#index-Helper_002ddescribe_002dbindings
